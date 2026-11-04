@@ -260,4 +260,6 @@ ScoutAI/
 └── README.md
 ```
 
-A hospedagem pública da aplicação ainda não foi configurada.
+A hospedagem pública da aplicação ainda não foi configurada. O roteiro e os
+parâmetros para publicar uma versão independente do computador do autor estão
+em [DEPLOY.md](DEPLOY.md).
