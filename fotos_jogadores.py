@@ -17,6 +17,10 @@ class Retrato:
     imagem: bytes | None
     fonte: str | None
     iniciais: str
+    credito: str = "FotMob"
+    licenca: str | None = None
+    url_licenca: str | None = None
+    mime: str = "image/png"
 
 
 def normalizar_nome(nome):
@@ -38,7 +42,12 @@ def obter_retrato(nome, pasta_fotos=PASTA_FOTOS):
         dados = arquivo.read_bytes()
         # Evita que um arquivo ausente ou corrompido quebre a pesquisa.
         with Image.open(BytesIO(dados)) as imagem:
+            mime = Image.MIME.get(imagem.format, "image/png")
             imagem.verify()
-        return Retrato(dados, registro["fonte"], iniciais)
+        return Retrato(
+            dados, registro["fonte"], iniciais,
+            registro.get("credito", "FotMob"), registro.get("licenca"),
+            registro.get("url_licenca"), mime,
+        )
     except (OSError, ValueError, KeyError, TypeError):
         return alternativa

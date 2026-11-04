@@ -2,14 +2,18 @@
   {
     "nome": "Lamine Yamal",
     "id": 1467236,
-    "arquivo": "1467236.png",
-    "fonte": "https://www.fotmob.com/players/1467236",
-    "url_imagem": "https://images.fotmob.com/image_resources/playerimages/1467236.png",
+    "arquivo": "yamal-commons.jpg",
+    "fonte": "https://commons.wikimedia.org/wiki/File:Lamine_Yamal_in_2025_(cropped).jpg",
+    "url_imagem": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lamine_Yamal_in_2025_%28cropped%29.jpg",
     "consulta": "2026-11-04",
     "dimensoes": [
-      192,
-      192
-    ]
+      558,
+      783
+    ],
+    "credito": "Biso / Wikimedia Commons",
+    "licenca": "CC BY 4.0",
+    "url_licenca": "https://creativecommons.org/licenses/by/4.0/",
+    "alteracoes": "Nenhuma; recorte previamente publicado na fonte."
   },
   {
     "nome": "Kylian Mbappé",

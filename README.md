@@ -207,7 +207,8 @@ e as fontes de cada recorte estão em
 
 ### Fotos
 
-As imagens locais vêm dos perfis do FotMob, com crédito na interface e origem
+As imagens locais vêm dos perfis do FotMob, exceto a amostra de Lamine Yamal,
+de Biso via Wikimedia Commons, sob CC BY 4.0. Os créditos aparecem na interface e a origem é
 registrada em [catalogo.json](assets/jogadores/catalogo.json). Consulte
 [FONTES.md](assets/jogadores/FONTES.md). As fotos de perfil não representam
 necessariamente o clube ou a aparência do jogador na temporada analisada.
