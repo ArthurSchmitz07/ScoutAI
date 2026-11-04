@@ -130,6 +130,7 @@ def exibir_comparador():
             lambda valor: f"{valor:.2f}" if pd.notna(valor) else "Não disponível"
         )
 
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(exibicao, hide_index=True, width="stretch")
 
     st.subheader("Comparação em gráficos")
@@ -317,6 +318,7 @@ def exibir_rankings():
         "Nota gols", "Nota assistências", "Pontuação",
     ]
     tabela = ranking[colunas].rename(columns={"Player": "Jogador", "Squad": "Clube", "Min": "Minutos"})
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         tabela, hide_index=True, width="stretch",
         column_config={
@@ -387,6 +389,7 @@ def exibir_mapa_perfis(df, referencia):
                 st.write("As médias deste grupo não se destacam nos extremos das métricas.")
             st.caption("São médias do grupo; cada jogador pode ter características diferentes.")
 
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         resumo, hide_index=True, width="stretch",
         column_config={metrica: st.column_config.NumberColumn(format="%.2f") for metrica in METRICAS},
@@ -463,6 +466,7 @@ def exibir_mapa_perfis(df, referencia):
         )
 
     st.write("**Grupos dos 16 craques**")
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         destaques[["Player", "Squad", "Grupo"]].sort_values(["Grupo", "Player"]).rename(
             columns={"Player": "Jogador", "Squad": "Clube"}
@@ -490,6 +494,7 @@ def exibir_mapa_perfis(df, referencia):
         st.write("**Craques neste grupo:** " + ", ".join(craques_grupo) + ".")
     else:
         st.write("Este grupo não contém nenhum dos 16 craques selecionados.")
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         integrantes[["Player", "Squad", "Comp", "Grupo", "Min", "Destaque"] + METRICAS].rename(
             columns={
@@ -504,6 +509,10 @@ def exibir_mapa_perfis(df, referencia):
 
 def exibir_perfis():
     """Exibe a busca e encerra apenas esta seção em caso de erro."""
+    st.info(
+        "Para escolher um jogador, use ‘Jogador de referência’ no menu lateral. "
+        "No celular, toque na seta no canto superior esquerdo para abrir esse menu."
+    )
     # 2. Carregamento da base
     pasta_projeto = Path(__file__).resolve().parent
 
@@ -657,6 +666,7 @@ def exibir_perfis():
         name="Valor"
     ).astype(float)
 
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         tabela_referencia.round(3),
         width="stretch",
@@ -681,6 +691,7 @@ def exibir_perfis():
         exportacao["Consulta referência"] = referencia["Data_consulta"]
         exportacao["Método cruzamentos referência"] = "Reconstituídos dos certos e da taxa de acerto a uma casa decimal"
 
+    st.caption("Deslize para o lado para ver todas as colunas, se necessário.")
     st.dataframe(
         resultado.round(3),
         hide_index=True,

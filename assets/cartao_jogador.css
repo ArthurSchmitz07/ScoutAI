@@ -77,11 +77,12 @@
 }
 
 @media (max-width: 700px) {
-    .st-key-cartao_jogador { padding: 22px 18px; border-radius: 18px; }
+    .st-key-cartao_jogador { padding: 18px 16px; border-radius: 18px; }
     .st-key-cartao_jogador h3 { font-size: 27px; }
     .st-key-cartao_jogador [data-testid="stMetricValue"] { font-size: 23px; }
-    .st-key-cartao_jogador [data-testid="stImage"] { max-width: 170px; }
-    .st-key-cartao_jogador [data-testid="stImage"] img { max-width: 170px; height: auto; }
+    .st-key-cartao_jogador [data-testid="stImage"] { max-width: 130px; }
+    .st-key-cartao_jogador [data-testid="stImage"] img { max-width: 130px; height: auto; }
+    .scout-avatar-iniciais { width: 130px; font-size: 40px; }
 }
 
 .scout-comparador-grid {
@@ -183,4 +184,15 @@
     background: rgba(255, 255, 255, .06);
     font-size: 40px;
     font-weight: 750;
+}
+
+@media (max-width: 700px) {
+    .scout-comparador-grid { gap: 12px; margin: 10px 0 16px; }
+    .scout-comparador-card { padding: 14px 14px 12px; border-radius: 16px; }
+    .scout-comparador-retrato { height: 100px; margin-bottom: 10px; }
+    .scout-comparador-retrato img { height: 100px; }
+    .scout-comparador-card h4 { font-size: 20px; margin-bottom: 6px; }
+    .scout-comparador-clube { margin-bottom: 10px; }
+    .scout-comparador-cor { margin: 10px 0 6px; }
+    .scout-comparador-iniciais { width: 90px; font-size: 32px; }
 }
