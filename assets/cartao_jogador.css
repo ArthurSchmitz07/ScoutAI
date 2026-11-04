@@ -1,0 +1,186 @@
+.st-key-cartao_jogador {
+    background:
+        radial-gradient(ellipse at 100% 70%, rgba(16, 185, 129, .24), transparent 58%),
+        linear-gradient(120deg, #111d32 0%, #12263a 65%, #0d3d3a 100%);
+    border: 1px solid #244653;
+    border-radius: 24px;
+    padding: 28px 32px;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, .12);
+    margin: 8px 0 14px;
+    overflow: hidden;
+}
+
+.st-key-cartao_jogador h3 {
+    color: #f8fafc;
+    font-size: clamp(1.7rem, 2.8vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+    padding-top: 0;
+}
+
+.st-key-cartao_jogador [data-testid="stCaptionContainer"],
+.st-key-cartao_jogador [data-testid="stCaptionContainer"] p {
+    color: #b5c8d5;
+    opacity: 1;
+}
+
+.st-key-cartao_jogador .scout-perfil-kicker {
+    color: #64e6b5;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .18em;
+    margin-bottom: 10px;
+}
+
+.st-key-cartao_jogador [data-testid="stMetricLabel"] p {
+    color: #b5c8d5;
+    font-size: 13px;
+}
+
+.st-key-cartao_jogador [data-testid="stMetricValue"] {
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
+    font-weight: 700;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.st-key-cartao_jogador [data-testid="stImage"] {
+    margin: 0 auto;
+    background: radial-gradient(circle at center, rgba(100, 230, 181, .18) 0%, rgba(100, 230, 181, .06) 60%, transparent 61%);
+}
+
+.st-key-cartao_jogador [data-testid="stImage"] img {
+    object-fit: contain;
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, .2));
+}
+
+.st-key-cartao_jogador [data-testid="stImageCaption"] {
+    color: #b5c8d5;
+    font-size: 11px;
+}
+
+.scout-avatar-iniciais {
+    width: min(180px, 100%);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    margin: 12px auto;
+    border: 1px solid rgba(100, 230, 181, .45);
+    border-radius: 50%;
+    background: rgba(100, 230, 181, .1);
+    color: #64e6b5;
+    font-size: 52px;
+    font-weight: 800;
+}
+
+@media (max-width: 700px) {
+    .st-key-cartao_jogador { padding: 22px 18px; border-radius: 18px; }
+    .st-key-cartao_jogador h3 { font-size: 27px; }
+    .st-key-cartao_jogador [data-testid="stMetricValue"] { font-size: 23px; }
+    .st-key-cartao_jogador [data-testid="stImage"] { max-width: 170px; }
+    .st-key-cartao_jogador [data-testid="stImage"] img { max-width: 170px; height: auto; }
+}
+
+.scout-comparador-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+    gap: 16px;
+    margin: 12px 0 22px;
+}
+
+.scout-comparador-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 20px 18px 16px;
+    border: 1px solid #294354;
+    border-top: 5px solid var(--cor-jogador);
+    border-radius: 20px;
+    background: linear-gradient(150deg, #111d32, #163638);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, .1);
+    text-align: center;
+}
+
+.scout-comparador-retrato {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 18px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--cor-jogador) 24%, transparent), transparent 70%);
+}
+
+.scout-comparador-retrato img {
+    width: auto;
+    height: 160px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .2));
+}
+
+.scout-comparador-card h4 {
+    color: #f8fafc;
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -.025em;
+    overflow-wrap: anywhere;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.scout-comparador-clube {
+    color: #c7d9e4;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 16px;
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+}
+
+.scout-comparador-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #b5c8d5;
+    font-size: 12px;
+}
+
+.scout-comparador-cor {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 14px 0 10px;
+    font-size: 11px;
+    color: #c7d9e4;
+}
+
+.scout-comparador-cor span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--cor-jogador);
+}
+
+.scout-comparador-fonte,
+.scout-comparador-fonte a {
+    font-size: 11px;
+    color: #b5c8d5;
+}
+
+.scout-comparador-iniciais {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--cor-jogador);
+    color: #f8fafc;
+    background: rgba(255, 255, 255, .06);
+    font-size: 40px;
+    font-weight: 750;
+}
