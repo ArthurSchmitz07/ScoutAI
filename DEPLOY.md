@@ -1,6 +1,10 @@
 # Publicar o ScoutAI com um endereço permanente
 
 Destino: **Streamlit Community Cloud**, na modalidade gratuita.
+Publicação concluída em **04/11/2026**:
+[ScoutAI online](https://scoutai-arthur.streamlit.app/).
+O aplicativo está público; o repositório GitHub continua privado.
+
 O aplicativo será executado nos servidores da hospedagem e não dependerá
 do computador de desenvolvimento ligado. O endereço será do tipo
 `https://<nome-disponível>.streamlit.app`.
@@ -12,6 +16,7 @@ do computador de desenvolvimento ligado. O endereço será do tipo
 | Conta GitHub | `ArthurSchmitz07` |
 | Repositório | `ArthurSchmitz07/ScoutAI` |
 | Branch | `main` |
+| Endereço publicado | `https://scoutai-arthur.streamlit.app/` |
 | Arquivo principal | `painel.py` |
 | Versão do Python, em Advanced settings | `3.14` |
 | Dependências | `requirements.txt`, na raiz do repositório |
@@ -42,6 +47,12 @@ local do Git, usada para enviar commits, não substitui a entrada na hospedagem.
 Não é necessário colocar tokens do GitHub no código ou nos segredos do ScoutAI.
 
 ## Conferência antes de compartilhar no LinkedIn
+
+Na publicação inicial, o Playwright confirmou acesso em uma sessão sem login,
+seleção de quatro craques, fotos de Yamal e Haaland carregadas, alteração dos
+pesos para 51%/49%, modo com 18 jogadores elegíveis e busca por Neymar.
+O mapa PCA e a tela de grupos também carregaram sem exceções da aplicação.
+O teste abaixo em celular físico permanece como conferência manual sugerida.
 
 - Abra o endereço publicado numa janela sem sessão de login para conferir o acesso público.
 - Compare dois e quatro craques e confira as fotos e os seis gráficos.

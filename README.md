@@ -7,6 +7,10 @@ ofensivos com Machine Learning.
 O objetivo é entender como cada jogador se destaca nas métricas disponíveis.
 As pontuações e os agrupamentos não representam uma medida de qualidade geral.
 
+**Acesse o aplicativo:** [ScoutAI online](https://scoutai-arthur.streamlit.app/).
+O acesso é público e não exige login. A hospedagem gratuita executa o aplicativo
+sem depender do computador do autor; após inatividade, pode haver uma tela de reativação.
+
 ## Funcionalidades
 
 - **Comparador:** escolha de dois a quatro jogadores entre os 16 craques europeus
@@ -260,6 +264,7 @@ ScoutAI/
 └── README.md
 ```
 
-A hospedagem pública da aplicação ainda não foi configurada. O roteiro e os
-parâmetros para publicar uma versão independente do computador do autor estão
-em [DEPLOY.md](DEPLOY.md).
+A aplicação está publicada no Streamlit Community Cloud em
+[scoutai-arthur.streamlit.app](https://scoutai-arthur.streamlit.app/).
+Os parâmetros de publicação e as limitações da hospedagem gratuita estão em
+[DEPLOY.md](DEPLOY.md).
