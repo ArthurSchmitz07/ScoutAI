@@ -1,0 +1,30 @@
+# Ambientes virtuais e arquivos locais do editor
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+
+# Caches, cobertura e arquivos temporários do Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.log
+
+# Configurações e credenciais locais
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Gráficos e exportações que podem ser gerados novamente
+outputs/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
