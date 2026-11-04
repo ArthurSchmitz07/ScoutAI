@@ -15,7 +15,7 @@ PASTA = Path(__file__).resolve().parent
 
 
 class FotosJogadoresTest(unittest.TestCase):
-    def test_catalogo_cobre_craques_e_lote_adicional_com_imagem_valida(self):
+    def test_catalogo_cobre_craques_e_lote_adicional_com_png_valido(self):
         craques = pd.read_csv(PASTA / "data/processed/comparacao_craques.csv")
         novos = {
             "Endrick", "Antoine Griezmann", "Antony", "Marcus Rashford",
@@ -32,16 +32,9 @@ class FotosJogadoresTest(unittest.TestCase):
             with self.subTest(jogador=nome):
                 retrato = obter_retrato(nome)
                 self.assertIsNotNone(retrato.imagem)
-                if nome == "Lamine Yamal":
-                    self.assertTrue(retrato.fonte.startswith("https://commons.wikimedia.org/wiki/File:"))
-                    self.assertEqual(retrato.credito, "Biso / Wikimedia Commons")
-                    self.assertEqual(retrato.licenca, "CC BY 4.0")
-                    self.assertEqual(retrato.url_licenca, "https://creativecommons.org/licenses/by/4.0/")
-                    self.assertEqual(retrato.mime, "image/jpeg")
-                else:
-                    self.assertTrue(retrato.fonte.startswith("https://www.fotmob.com/players/"))
+                self.assertTrue(retrato.fonte.startswith("https://www.fotmob.com/players/"))
                 with Image.open(BytesIO(retrato.imagem)) as imagem:
-                    self.assertEqual(imagem.format, "JPEG" if nome == "Lamine Yamal" else "PNG")
+                    self.assertEqual(imagem.format, "PNG")
                     self.assertGreaterEqual(min(imagem.size), 100)
                     imagem.verify()
 

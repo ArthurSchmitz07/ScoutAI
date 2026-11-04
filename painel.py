@@ -36,10 +36,8 @@ def exibir_cartoes_comparador(comparacao, cores):
         retrato = obter_retrato(jogador["Jogador"])
         if retrato.imagem is not None:
             imagem = b64encode(retrato.imagem).decode("ascii")
-            foto = f'<img src="data:{escape(retrato.mime, quote=True)};base64,{imagem}" alt="Foto de {nome}">'
-            credito = f'<a href="{escape(retrato.fonte, quote=True)}" target="_blank" rel="noopener noreferrer">Foto: {escape(retrato.credito)} ↗</a>'
-            if retrato.licenca and retrato.url_licenca:
-                credito += f' · <a href="{escape(retrato.url_licenca, quote=True)}" target="_blank" rel="noopener noreferrer">{escape(retrato.licenca)}</a>'
+            foto = f'<img src="data:image/png;base64,{imagem}" alt="Foto de {nome}">'
+            credito = f'<a href="{escape(retrato.fonte, quote=True)}" target="_blank" rel="noopener noreferrer">Foto: FotMob ↗</a>'
         else:
             foto = (
                 f'<div class="scout-comparador-iniciais" role="img" aria-label="Avatar de {nome}">'
@@ -634,10 +632,7 @@ def exibir_perfis():
                 st.caption("Foto não cadastrada ou indisponível.")
 
     if retrato.fonte:
-        credito = f"Foto de perfil: [{retrato.credito}]({retrato.fonte})"
-        if retrato.licenca and retrato.url_licenca:
-            credito += f" · [{retrato.licenca}]({retrato.url_licenca})"
-        st.caption(f"{credito}. O clube e os números acima são do recorte analisado.")
+        st.caption(f"Foto de perfil: [FotMob]({retrato.fonte}). O clube e os números acima são do recorte analisado.")
     st.caption("Candidatos europeus: CSV identificado como 2025/26.")
 
     if referencia["Externo"]:
